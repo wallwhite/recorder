@@ -1,0 +1,10 @@
+export { default as SvgIcon } from './SvgIcon';
+export { default as PlayIcon } from './PlayIcon';
+export { default as CameraSettingIcon } from './CameraSettingIcon';
+export { default as MicIcon } from './MicIcon';
+export { default as RecProgressIcon } from './RecProgressIcon';
+export { default as RecStopIcon } from './RecStopIcon';
+export { default as ResetIcon } from './ResetIcon';
+export { default as StopIcon } from './StopIcon';
+export { default as RecIcon } from './RecIcon';
+export { default as SettingsIcon } from './SettingsIcon';

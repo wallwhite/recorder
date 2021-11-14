@@ -1,15 +1,27 @@
 import React from 'react';
-import { CustomProvider } from 'rsuite';
+import { CustomProvider, Container, Content, FlexboxGrid } from 'rsuite';
+import styled from 'styled-components';
+import { Recorder } from 'app/features/Recorder/components';
+import { RecorderContextProvider } from 'app/features/Recorder/context';
 import 'rsuite/dist/rsuite.min.css';
+
+const StyledFlexboxGrid = styled(FlexboxGrid)`
+    height: 100vh;
+`;
 
 const App: React.FC = () => (
     <CustomProvider theme="dark">
-        <header className="App-header">
-            <p>Editand save to reload. </p>
-            <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                Learn React
-            </a>
-        </header>
+        <Container>
+            <Content>
+                <StyledFlexboxGrid justify="center" align="middle">
+                    <FlexboxGrid.Item colspan={12}>
+                        <RecorderContextProvider>
+                            <Recorder />
+                        </RecorderContextProvider>
+                    </FlexboxGrid.Item>
+                </StyledFlexboxGrid>
+            </Content>
+        </Container>
     </CustomProvider>
 );
 
